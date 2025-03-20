@@ -23,6 +23,10 @@ This is a web-based conference management system built using Laravel. The system
   - LoA (Letter of Acceptance)
   - Invoices
   - Receipts
+- **PDF Download**
+  - Download LoA as PDF
+  - Download Invoice as PDF
+  - Download Receipt as PDF
 
 ## Installation
 
@@ -70,18 +74,21 @@ This is a web-based conference management system built using Laravel. The system
 - `POST /api/loas` - Create a new LoA
 - `PUT /api/loas/{id}` - Update an LoA
 - `DELETE /api/loas/{id}` - Delete an LoA
+- `GET /api/loas/{id}/download` - Download LoA as PDF
 
 ### Invoices
 - `GET /api/invoices` - Retrieve all invoices
 - `POST /api/invoices` - Create a new invoice
 - `PUT /api/invoices/{id}` - Update an invoice
 - `DELETE /api/invoices/{id}` - Delete an invoice
+- `GET /api/invoices/{id}/download` - Download Invoice as PDF
 
 ### Receipts
 - `GET /api/receipts` - Retrieve all receipts
 - `POST /api/receipts` - Create a new receipt
 - `PUT /api/receipts/{id}` - Update a receipt
 - `DELETE /api/receipts/{id}` - Delete a receipt
+- `GET /api/receipts/{id}/download` - Download Receipt as PDF
 
 ### Virtual Accounts & Bank Transfers
 - `GET /api/virtual-accounts` - Retrieve all virtual accounts
@@ -100,5 +107,3 @@ This is a web-based conference management system built using Laravel. The system
 
 
 ## License
-
-
