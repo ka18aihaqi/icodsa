@@ -7,60 +7,98 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About This Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This is a web-based conference management system built using Laravel. The system provides user authentication, role-based access control, and CRUD functionalities for managing invoices, LoAs, receipts, virtual accounts, and bank transfers.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **User Authentication** (Login, Register, Update, Delete)
+- **Role-Based Access Control**
+  - Super Admin: Full access to all features
+  - Admin ICoDSA & Admin ICICTYA: Can only manage LoA, Invoices, and Receipts
+- **CRUD Operations**
+  - Virtual Accounts
+  - Bank Transfers
+  - LoA (Letter of Acceptance)
+  - Invoices
+  - Receipts
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository.git
+   cd your-repository
+   ```
+2. Install dependencies:
+   ```bash
+   composer install
+   npm install
+   ```
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+4. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
+5. Run migrations:
+   ```bash
+   php artisan migrate --seed
+   ```
+6. Serve the application:
+   ```bash
+   php artisan serve
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## API Endpoints
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Authentication
+- `POST /api/register` - Register a new user
+- `POST /api/login` - Login and receive a token
+- `POST /api/logout` - Logout from the system
 
-## Laravel Sponsors
+### User Management
+- `GET /api/users` - Get all users (Super Admin only)
+- `PUT /api/users/{id}` - Update user information
+- `DELETE /api/users/{id}` - Delete a user
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### LoA (Letter of Acceptance)
+- `GET /api/loas` - Retrieve all LoAs
+- `POST /api/loas` - Create a new LoA
+- `PUT /api/loas/{id}` - Update an LoA
+- `DELETE /api/loas/{id}` - Delete an LoA
 
-### Premium Partners
+### Invoices
+- `GET /api/invoices` - Retrieve all invoices
+- `POST /api/invoices` - Create a new invoice
+- `PUT /api/invoices/{id}` - Update an invoice
+- `DELETE /api/invoices/{id}` - Delete an invoice
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Receipts
+- `GET /api/receipts` - Retrieve all receipts
+- `POST /api/receipts` - Create a new receipt
+- `PUT /api/receipts/{id}` - Update a receipt
+- `DELETE /api/receipts/{id}` - Delete a receipt
+
+### Virtual Accounts & Bank Transfers
+- `GET /api/virtual-accounts` - Retrieve all virtual accounts
+- `POST /api/virtual-accounts` - Create a new virtual account
+- `PUT /api/virtual-accounts/{id}` - Update a virtual account
+- `DELETE /api/virtual-accounts/{id}` - Delete a virtual account
+- `GET /api/bank-transfers` - Retrieve all bank transfers
+- `POST /api/bank-transfers` - Create a new bank transfer
+- `PUT /api/bank-transfers/{id}` - Update a bank transfer
+- `DELETE /api/bank-transfers/{id}` - Delete a bank transfer
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Security
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
