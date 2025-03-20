@@ -70,25 +70,25 @@ This is a web-based conference management system built using Laravel. The system
 - `DELETE /api/users/{id}` - Delete a user
 
 ### LoA (Letter of Acceptance)
-- `GET /api/loas` - Retrieve all LoAs
-- `POST /api/loas` - Create a new LoA
-- `PUT /api/loas/{id}` - Update an LoA
-- `DELETE /api/loas/{id}` - Delete an LoA
-- `GET /api/loas/{id}/download` - Download LoA as PDF
+- `GET /api/letterofacceptances` - Retrieve all LoAs
+- `POST /api/letterofacceptances` - Create a new LoA
+- `PUT /api/letterofacceptances/{id}` - Update an LoA
+- `DELETE /api/letterofacceptances/{id}` - Delete an LoA
+- `GET /api/letter-of-acceptance/download/{paper_id}` - Download LoA as PDF
 
 ### Invoices
 - `GET /api/invoices` - Retrieve all invoices
 - `POST /api/invoices` - Create a new invoice
 - `PUT /api/invoices/{id}` - Update an invoice
 - `DELETE /api/invoices/{id}` - Delete an invoice
-- `GET /api/invoices/{id}/download` - Download Invoice as PDF
+- `GET /api/invoice/download/{id}` - Download Invoice as PDF
 
 ### Receipts
 - `GET /api/receipts` - Retrieve all receipts
 - `POST /api/receipts` - Create a new receipt
 - `PUT /api/receipts/{id}` - Update a receipt
 - `DELETE /api/receipts/{id}` - Delete a receipt
-- `GET /api/receipts/{id}/download` - Download Receipt as PDF
+- `GET /api/receipt/download/{id}` - Download Receipt as PDF
 
 ### Virtual Accounts & Bank Transfers
 - `GET /api/virtual-accounts` - Retrieve all virtual accounts
