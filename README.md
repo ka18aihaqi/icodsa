@@ -91,14 +91,14 @@ This is a web-based conference management system built using Laravel. The system
 - `GET /api/receipt/download/{id}` - Download Receipt as PDF
 
 ### Virtual Accounts & Bank Transfers
-- `GET /api/virtual-accounts` - Retrieve all virtual accounts
-- `POST /api/virtual-accounts` - Create a new virtual account
-- `PUT /api/virtual-accounts/{id}` - Update a virtual account
-- `DELETE /api/virtual-accounts/{id}` - Delete a virtual account
-- `GET /api/bank-transfers` - Retrieve all bank transfers
-- `POST /api/bank-transfers` - Create a new bank transfer
-- `PUT /api/bank-transfers/{id}` - Update a bank transfer
-- `DELETE /api/bank-transfers/{id}` - Delete a bank transfer
+- `GET /api/virtualaccounts` - Retrieve all virtual accounts
+- `POST /api/virtualaccounts` - Create a new virtual account
+- `PUT /api/virtualaccounts/{id}` - Update a virtual account
+- `DELETE /api/virtualaccounts/{id}` - Delete a virtual account
+- `GET /api/banktransfers` - Retrieve all bank transfers
+- `POST /api/banktransfers` - Create a new bank transfer
+- `PUT /api/banktransfers{id}` - Update a bank transfer
+- `DELETE /api/banktransfers/{id}` - Delete a bank transfer
 
 ## Contributing
 
